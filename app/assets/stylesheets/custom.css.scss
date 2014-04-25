@@ -1,8 +1,15 @@
+$navbarBackground: #428bce;
+$navbarInverseBackground:                #428bce !default;
+$navbarInverseBackgroundHighlight:       #428bce !default;
+$navbarInverseBorder:                    #428bce !default;
+
 @import "bootstrap";
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -16,6 +23,7 @@ html {
 
 body {
   padding-top: 60px;
+background-image:url("/images/notepaper.jpg");
 }
 
 section {
@@ -79,6 +87,7 @@ p {
   }
 }
 
+
 /* footer */
 
 footer {
@@ -137,6 +146,35 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+  }
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
   }
 }
 
@@ -199,9 +237,11 @@ input {
 }
 .content {
   display: block;
+background-color: pink;
 }
 .timestamp {
   color: $grayLight;
+background-color: yellow;
 }
 .gravatar {
   float: left;
@@ -213,4 +253,5 @@ aside {
     margin-bottom: 5px;
   }
 }
+
 
